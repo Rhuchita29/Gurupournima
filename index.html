@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 8px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #ffffff;
+}
+
+.flip-card,#firstline {
+    background-color: transparent;
+    width: 190px;
+    height: 200px;
+    perspective: 900px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #ff0000;
+    color: #fffaf0;
+    padding: 25px;
+    text-shadow: 5px 7px indigo;
+}
+
+.flip-card-back {
+    background-color: #f0f8ff;
+    padding: 20px;
+    color: #9400d3;
+    transform: rotateY(180deg);
+}
+h1{
+    font-size: 90px;
+    border-top: solid white 2px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #fffaf0;
+}
+h2{
+    font-size: 90px;
+    border-top: solid white 2px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #800000;
+}
+.flipcard{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%,-50%);
+}
+/* Float four columns side by side */
+.flip-card {
+  float: left;
+  width: 25%;
+  padding: 0 8px;
+}
+#firstline {
+    float: left;
+    width: 20%;
+    padding: 0 8px
+}
+
+.flip-card{
+  cursor: pointer;
+}
+/* Remove extra left and right margins, due to padding */
+.flip-card, #firstline {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.flip-card:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 550px) {
+  .flip-card-inner {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+
+.flip-card-front, .flip-card-back{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  
+  transform-style: preserve-3d;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: 1.0s linear;
+}
+.flip-card-front{
+  transform: perspective(300px) rotateY(0deg);
+}
+.flip-card-back{
+  background: #f0f8ff;
+  transform: perspective(300px) rotateY(180deg);
+}
+.flip-card-back-content{
+  color: #9400d3;
+  text-align: center;
+  width: 100%;
+}
+.flip-card-front a:hover{
+  color: white;
+}
+.flip-card:hover> .flip-card-front{
+  transform: perspective(300px) rotateY(-180deg)
+}
+.flip-card:hover> .flip-card-back{
+  transform: perspective(300px) rotateY(0deg)
+}
+/* Float four columns side by side */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -13.5%;
+  width: 70%;
+}
+p{
+   color: #9400d3;
+   text-align: center;
+   font-weight: 175; 
+   font-size: 13px;
+   margin-top: -10.5%;
+}
+#Heading{
+   color: #330099;
+   text-align: center;
+   font-weight: 400; 
+   font-size: 30px;
+   margin-top: 0%;
+}
+</style>
+</head>
+<body>
+
+<h2>🎊🎉A Special gift from 2016-17 batch🎉🎊</h2>
+<p id="Heading">Click on each card to see what's there inside</p>
+
+<div class="flip-card" id="firstline" style="float: left">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>H</h1>
+    </div>
+    <div class="flip-card-back">
+        <a href="H1.jpg">
+            <img src="H1.jpg" alt="School">
+        </a>
+    </div>
+  </div>
+</div>
+<div class="flip-card" id="firstline" style="float: left">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h1>A</h1>
+        </div>
+        <div class="flip-card-back">
+            <a href="C1.jpg">
+                <img src="C1.jpg" alt="School">
+            </a>
+            <p>
+                Many people will walk in<br>and out of your life,<br> but only Guru's will leave<br> footprints in your heart<br>
+            </p>
+        </div>
+    </div>
+</div>
+    <div class="flip-card" id="firstline" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>P</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A3.jpg">
+                    <img src="A3.jpg" alt="School">
+                </a>
+                <p>
+                    The sky not only fulfill it's needs with the<br> brightness of moon but it's the stars<br>which make it look like a Universe
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="firstline" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>P</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A4.jpg">
+                    <img src="A4.jpg" alt="School">
+                </a>
+                <p>
+                    Language serves not only to express<br> thoughts but to make thoughts possible<br> which would not exist without it
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="firstline" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>Y</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A5.jpg">
+                    <img src="A5.jpg" alt="School">
+                </a>
+                <p>
+                    Gave us the leadership skills,<br> to be visionary and well prepared<br> and confident in what we do
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="4block "style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>G</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A6.jpg">
+                    <img src="A6.jpg" alt="School">
+                </a>
+                <p>
+                    Farewell To Grade 10th Students
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="4block" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>U</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A7.jpg">
+                    <img src="A7.jpg" alt="School">
+                </a>
+                <p>
+                    Children's Day Celebration
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="4block" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>R</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A8.jpg">
+                    <img src="A8.jpg" alt="School">
+                </a>
+                <p>
+                    Staff of 1997 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" id="4block" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>U</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A9.jpg">
+                    <img src="A9.jpg" alt="School">
+                </a>
+                <p>
+                    Children's Day celebration
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>P</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A10.jpg">
+                    <img src="A10.jpg" alt="School">
+                </a>
+                <p>
+                    Mathematics is the handwriting <br> on the human consciousness of<br> the very spirit of life itself
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>O</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A11.jpg">
+                    <img src="A11.jpg" alt="School">
+                </a>
+                <p>
+                    Made us curious about the world around us<br> and discover things how they are..<br> through Social Studies and Economics
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>U</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A12.jpg">
+                    <img src="A12.jpg" alt="School">
+                </a>
+                <p>
+                    Sports and Music added glory to the life.<br> The therapy of Music and maintenance<br> of Sports made lives easy
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>R</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A13.jpg">
+                    <img src="A13.jpg" alt="School">
+                </a>
+                <p>
+                    Sports and reading are <br>the two things that<br> made our heart race
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>N</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A14.jpg">
+                    <img src="A14.jpg" alt="School">
+                </a>
+                <p>
+                    Teaching is a calling too. We have been always<br> taught that Teachers in their way are holy angles<br> leading their flocks out of darkness
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>I</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A15.jpg">
+                    <img src="A15.jpg" alt="School">
+                </a>
+                <p>
+                    Though English is international & must language,<br> but speaking in our national language &<br> mother tongue is great
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>M</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="A16.jpg">
+                    <img src="A16.jpg" alt="School">
+                </a>
+                <p>
+                    Computer Teachers are hard to find, difficult to <br>part and impossible to forget 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="float: left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>A</h1>
+            </div>
+            <div class="flip-card-back">
+                <a href="Final Video.wmv">
+                	A short Video
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
